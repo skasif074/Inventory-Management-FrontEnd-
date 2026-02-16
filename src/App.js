@@ -3,6 +3,9 @@ import './App.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import RegisterUser from './Components/LoginComponent/RegisterUser';
 import LoginPage from './Components/LoginComponent/LoginPage';
+import AdminMenu from './Components/LoginComponent/AdminMenu';
+import ManagerMenu from './Components/LoginComponent/ManagerMenu';
+import VendorMenu from './Components/LoginComponent/VendorMenu';
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
         <Routes>
           <Route path='/' element={<LoginPage/>}/>
            <Route path='/register' element={<RegisterUser/>}/>
+           <Route path='/admin-menu' element={<AdminMenu/>}/>
+           <Route path='/vendor-menu' element={<VendorMenu/>}/>
+           <Route path='/manager-menu' element={<ManagerMenu/>}/>
         </Routes>
       </BrowserRouter>
 

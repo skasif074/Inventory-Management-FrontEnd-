@@ -14,8 +14,8 @@ export const registerNewUser=(user)=> {
 
 
 export const validateUser=(userId,password)=> {
-    return axios.get(LOGIN_URL,userId,password,{
-        withCredentials: true
+    return axios.get(`${LOGIN_URL}/${userId}/${password}`, {
+        withCredentials: true  
     });
     }
 
@@ -37,7 +37,7 @@ export const getRole=()=>{
     });
 }
 	
-	export const logout=()=>{
+	export const logoutUser=()=>{
     return axios.post(LOGOUT_URL,{
         withCredentials: true
     });
