@@ -19,11 +19,22 @@ const VendorMenu = () => {
           navigate('/');
      })
   };
-  return (
-    <div>
-      
-    </div>
-  )
+return (
+      <div className=".container">
+      <br/>
+        <div  align="center" style={{backgroundColor:'yellow'}}>
+        <h1 className = "text-center" style={{color:'blue'}}><u><i>Inventory Vendor Menu</i></u></h1>
+        </div>
+        <Navbar expand="lg" bg="warning">
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="me-auto">
+         <Nav.Link href=""><b>Show User Details</b></Nav.Link>
+         <Nav.Link onClick={handleLogout}><b>Logout</b></Nav.Link>
+         </Nav>
+       </Navbar.Collapse>
+  </Navbar>
+ </div>
+  );
 }
 
 export default VendorMenu
